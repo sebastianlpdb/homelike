@@ -7,4 +7,4 @@ Based on the client assignment.
 4. Add many basic components like Button, InputText, etc. as styled components
 5. Restructure some views as components
 6. Fix bootstrap-grid.min.css path in index.html
-7. Webpack is inside the application since it was created using `create-react-app`. I've only ejected the app using `npm run eject`
+7. Webpack is inside the application since it was created using `create-react-app`. I've only ejected the app using `npm run eject` and webpack appears.
