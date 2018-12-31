@@ -8,5 +8,5 @@ Based on the client assignment.
 5. Restructure some views as components
 6. Fix bootstrap-grid.min.css path in index.html
 7. Webpack is inside the application since it was created using `create-react-app`. I've only ejected the app using `npm run eject` and webpack appears.
-8. Adding the information about the owner, I only found the email, but reading the API there are more fields. I think something happend with the graphql resolver but during it's out of the scope and the lack of time I leave it right there.
-9. 
+8. When I was adding the information about the owner, I only found the email, but reading the API there are more fields. I think something happend with the graphql resolver but during it's out of the scope and the lack of time I leave it right there.
+9. Installed `react-loading` to get a nice loading component
