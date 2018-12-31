@@ -22,14 +22,14 @@ export const FETCH_APARTMENTS = gql`
   }`
 ;
 
-export const FETCH_APARTMENT = id => gql`
-  {
-    apartment(_id: "${id}") {
+export const FETCH_APARTMENT = gql`
+  query Apartment($id: String!) {
+    apartment(_id: $id) {
       _id
       owner {
-      _id
+        _id
         email
-      } 
+      }
       title
       location {
         title
@@ -46,5 +46,5 @@ export const FETCH_APARTMENT = id => gql`
       } 
       services 
     }
-  }`
-;
+  }
+`;

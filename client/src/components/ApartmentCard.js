@@ -81,13 +81,15 @@ const OwnerDetails = styled.div`
   bottom: 0;
 `;
 
-const Apartment = props => {  
+const Apartment = props => {
+  const { apartment, direction } = props;
+
   return (
-    <ApartmentCard direction={props.direction}>
+    <ApartmentCard direction={direction}>
       <ApartmentImageContainer>
-        <ApartmentImage src={`${constants.APARTMENTS_BASE_IMAGE_URL}/${props.apartment.images[0]}`} />
+        <ApartmentImage src={`${constants.APARTMENTS_BASE_IMAGE_URL}/${apartment.images[0]}`} />
         <ApartmentPriceContainer>
-          <span>{`${props.apartment.price} ${constants.DEFAULT_CURRENCY}`}</span>
+          <span>{`${apartment.price} ${constants.DEFAULT_CURRENCY}`}</span>
           <ApartmentPeriodContainer>
             <PeriodSeparator>/</PeriodSeparator>
             <span>{constants.DEFAULT_TIME_PERIOD}</span>
@@ -95,13 +97,13 @@ const Apartment = props => {
         </ApartmentPriceContainer>
       </ApartmentImageContainer>
       <ApartmentDetails>
-        <ApartmentTitle>{props.apartment.title}</ApartmentTitle>
-        <ApartmentSize>{`${props.apartment.size} ${constants.DEFAULT_SIZE_UNIT}`}</ApartmentSize>
-        <Amenities amenities={props.apartment.amenities} />
+        <ApartmentTitle>{apartment.title}</ApartmentTitle>
+        <ApartmentSize>{`${apartment.size} ${constants.DEFAULT_SIZE_UNIT}`}</ApartmentSize>
+        <Amenities amenities={apartment.amenities} />
         {
           props.withOwner && 
             <OwnerDetails>
-              <span>{`Owner email: ${props.apartment.owner.email}`}</span>
+              <span>{`Owner email: ${apartment.owner.email}`}</span>
             </OwnerDetails>
         }
       </ApartmentDetails>
