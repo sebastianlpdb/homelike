@@ -2,10 +2,13 @@ import styled from 'styled-components';
 
 const InputText = styled.input`
   background: transparent;
-  border: 2px solid #FAFAFA;
-  border-radius: 5px;
   height: 30px;
-  color: #fafafa;
+  color: ${props => props.color || '#FAFAFA'};
+
+  ${props => props.border && `
+    border: ${props => props.border};
+    border-radius: 10px;
+  `}
 `;
 
 

@@ -10,3 +10,6 @@ Based on the client assignment.
 7. Webpack is inside the application since it was created using `create-react-app`. I've only ejected the app using `npm run eject` and webpack appears.
 8. When I was adding the information about the owner, I only found the email, but reading the API there are more fields. I think something happend with the graphql resolver but during it's out of the scope and the lack of time I leave it right there.
 9. Installed `react-loading` to get a nice loading component
+10. I couldn't get the location data, always getting "null" :/ so I only add the searchBox but it doesn't anything
+11. The Apartments views include a filter (price) because I couldn't make the others. But the plan may be the same as the applied in that filter.
+12. Maybe could move the filter logic to the API, so the frontend doesn't work too much.
