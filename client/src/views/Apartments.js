@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Apartments = props => {
+const Apartments = () => {
   const params = new URLSearchParams(window.location.search);
 
   console.log(params);

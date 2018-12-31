@@ -10,7 +10,7 @@ const Apartment = props => {
 
   return (
     <section>
-      <Query query={FETCH_APARTMENT(apartmentId)}>
+      <Query query={FETCH_APARTMENT} variables={{ id: apartmentId }}>
       {({ data, loading, error}) => {
 
         if (loading) return <Loading />;
