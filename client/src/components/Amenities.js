@@ -11,9 +11,9 @@ const Amenity = styled.span`
 const Amenities = props => {
   const amenities = props.amenities.slice(0, props.limit);
   
-  return amenities.map(amenity => {
+  return amenities.map((amenity, index) => {
     return (
-      <Amenity>
+      <Amenity key={`${amenity}-${index}`}>
         <i></i>
         <span>{amenity}</span>
       </Amenity>

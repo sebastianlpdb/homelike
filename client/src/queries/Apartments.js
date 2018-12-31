@@ -21,3 +21,30 @@ export const FETCH_APARTMENTS = gql`
     }
   }`
 ;
+
+export const FETCH_APARTMENT = id => gql`
+  {
+    apartment(_id: "${id}") {
+      _id
+      owner {
+      _id
+        email
+      } 
+      title
+      location {
+        title
+      }
+      size
+      price
+      images
+      amenities
+      details {
+        rooms
+        bedrooms
+        floor
+        bathrooms
+      } 
+      services 
+    }
+  }`
+;

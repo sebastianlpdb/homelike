@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
-import Apartment from './Apartment';
+import Apartment from './ApartmentCard';
 
 /**
  * Hacky thing to only add margin-top to wrapped by flex divs
@@ -15,12 +15,18 @@ const ApartmentCol = styled.div`
   margin-top: 15px;
 `;
 
+const ApartmentCardContainer = styled.div`
+  width: 350px;
+`;
+
 const Apartments = ({ apartments }) => {
   return apartments.map(apartment => {
     return (
       <ApartmentCol className="col-sm" key={apartment._id}>
         <Link to={`/apartments/${apartment._id}`}>
-          <Apartment apartment={apartment} />
+          <ApartmentCardContainer>
+            <Apartment direction="column" apartment={apartment} />
+          </ApartmentCardContainer>
         </Link>
       </ApartmentCol>
     );
